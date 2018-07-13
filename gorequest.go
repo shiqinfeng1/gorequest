@@ -1112,7 +1112,7 @@ func (s *SuperAgent) getResponseBytes() (Response, []byte, []error) {
 	if s.Debug {
 		dump, err := httputil.DumpResponse(resp, true)
 		if nil != err {
-			s.logger.Println("Error:", err)
+			s.logger.Printf("Error:%v\n", err)
 		} else {
 			s.logger.Printf("HTTP Response: %s", string(dump))
 		}
