@@ -1083,7 +1083,7 @@ func (s *SuperAgent) getResponseBytes() (Response, []byte, []error) {
 		dump, err := httputil.DumpRequest(req, true)
 		s.logger.SetPrefix("[http] ")
 		if err != nil {
-			s.logger.Println("Error:", err)
+			s.logger.Printf("Error:%v\n", err)
 		} else {
 			s.logger.Printf("HTTP Request: %s", string(dump))
 		}
@@ -1094,7 +1094,7 @@ func (s *SuperAgent) getResponseBytes() (Response, []byte, []error) {
 		curl, err := http2curl.GetCurlCommand(req)
 		s.logger.SetPrefix("[curl] ")
 		if err != nil {
-			s.logger.Println("Error:", err)
+			s.logger.Printf("Error:%v\n", err)
 		} else {
 			s.logger.Printf("CURL command line: %s", curl)
 		}
