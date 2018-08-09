@@ -1085,7 +1085,7 @@ func (s *SuperAgent) getResponseBytes() (Response, []byte, []error) {
 		if err != nil {
 			s.logger.Printf("Error:%v\n", err)
 		} else {
-			pretty.Printf("GOREQUEST HTTP Request %s", string(dump))
+			pretty.Printf("\n\nGOREQUEST HTTP Request %s", string(dump))
 		}
 	}
 
@@ -1114,7 +1114,7 @@ func (s *SuperAgent) getResponseBytes() (Response, []byte, []error) {
 		if nil != err {
 			s.logger.Printf("Error:%v\n", err)
 		} else {
-			pretty.Printf("GOREQUEST HTTP Response:\n %s", string(dump))
+			pretty.Printf("\n\nGOREQUEST HTTP Response:\n %s", string(dump))
 		}
 	}
 
